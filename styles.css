@@ -1,0 +1,425 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #0c0c16;
+    color: white;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* LEFT */
+.left {
+    width: 55%;
+    padding: 40px;
+    background: linear-gradient(135deg, #0c0c16, #111125);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.player-info {
+    margin-top: 120px;
+}
+
+.player-info h1 {
+    font-size: 72px;
+    line-height: 1.1;
+}
+
+.position {
+    margin-top: 20px;
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+/* RIGHT */
+.right {
+    width: 45%;
+    background: #c4161c;
+    position: relative;
+    padding: 40px;
+}
+
+.player-img {
+    position: absolute;
+    left: -200px;
+    bottom: 0;
+    height: 80%;
+}
+
+/* SIDE PANEL */
+.side-panel {
+    position: absolute;
+    right: 150px;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 260px;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 18px;
+}
+
+.card h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.league {
+    font-size: 11px;
+    opacity: 0.7;
+    margin-bottom: 15px;
+}
+
+.match {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.match img {
+    width: 36px;
+}
+
+.date {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* RADAR */
+.radar-card {
+    text-align: center;
+}
+
+.radar-wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.radar {
+    width: 100%;
+    height: 100%;
+}
+
+.label {
+    position: absolute;
+    font-size: 10px;
+    opacity: 0.75;
+    white-space: nowrap;
+}
+
+.l-top {
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.l-right {
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.l-bottom {
+    bottom: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.l-left {
+    left: -34px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.l-top-left {
+    top: 18px;
+    left: -12px;
+}
+
+.l-bottom-left {
+    bottom: 18px;
+    left: -12px;
+}
+
+
+
+.top-left {
+    top: 18px;
+    left: -12px;
+}
+
+.bottom-left {
+    bottom: 18px;
+    left: -12px;
+}
+
+/* STATS */
+.stats-list {
+    list-style: none;
+    font-size: 13px;
+}
+
+.stats-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.career-box {
+  color: #fff;
+  padding: 40px;
+  max-width: 500px;
+}
+
+.career-box h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-left: 4px solid red;
+  padding-left: 10px;
+}
+
+.player-bio p {
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+.career-item {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.year {
+  min-width: 110px;
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+.details p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.snapshot-card h4 {
+  margin-bottom: 15px;
+}
+
+.snapshot-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.snapshot-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.snapshot-list li span {
+  opacity: 0.75;
+}
+
+.snapshot-list li strong {
+  color: #fff;
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: conic-gradient(#f5b971 0% 50%, rgba(255,255,255,0.2) 50% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+.stats-panel {
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 22px;
+  color: #fff;
+  max-width: 360px;
+}
+
+/* Header */
+.stats-header h3 {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.stats-header span {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Cards */
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.stat-card {
+  background: rgba(0,0,0,0.3);
+  border-radius: 14px;
+  padding: 14px 10px;
+  text-align: center;
+}
+
+.stat-card span {
+  font-size: 11px;
+  opacity: 0.75;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 28px;
+  margin-top: 6px;
+}
+
+/* Bars */
+.bar-row {
+  margin-bottom: 14px;
+}
+
+.bar-row label {
+  font-size: 12px;
+  opacity: 0.8;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.bar {
+  height: 6px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: #f5b971;
+  border-radius: 10px;
+  transition: width 0.6s ease;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .stats-panel {
+    max-width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .stats-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card strong {
+    font-size: 24px;
+  }
+}
+.skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.skill {
+  text-align: center;
+  color: #fff;
+}
+
+.circle {
+  --size: 50px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background:
+    conic-gradient(
+      #f5b971 calc(var(--p) * 1%),
+      rgba(255,255,255,0.15) 0
+    );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin: auto;
+}
+
+.skill span {
+  font-size: 12px;
+  margin-top: 6px;
+  display: block;
+  opacity: 0.85;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* κρατάει τα στοιχεία ομοιόμορφα */
+}
+
+.emoji {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 4px;
+}
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon {
+  width: 25px;      /* ΑΛΛΑΞΕ εδώ το μέγεθος */
+  height: 25px;
+  opacity: 0.9;
+}
