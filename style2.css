@@ -1,0 +1,222 @@
+/* BASE SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    background: #0c0c16;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+
+.red-text { color: #e10600; }
+
+/* LEFT SECTION */
+.left-section {
+    width: 40%;
+    padding: 40px 60px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.game-menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.game-menu a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.6);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.3s;
+    
+}
+
+.game-menu a.active, .game-menu a:hover {
+    color: #e10600;
+}
+
+.game-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0; height: 2px;
+    background: #e10600;
+    bottom: -5px; left: 0;
+    transition: 0.3s;
+}
+
+.game-menu a.active::after, .game-menu a:hover::after {
+    width: 100%;
+}
+
+/* MAIN CONTAINER */
+.bio-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.bio-intro {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.bio-intro h1 {
+    font-size: 56px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+/* GLASS EFFECT */
+.glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+}
+
+.p-30 { padding: 30px; }
+
+/* INFO CARD */
+.info-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 30px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.info-item span {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 5px;
+}
+
+/* SECTIONS */
+.section { margin-bottom: 80px; }
+
+.section h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    border-left: 5px solid #e10600;
+    padding-left: 15px;
+}
+
+/* TIMELINE */
+.timeline-item {
+    display: flex;
+    gap: 40px;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    border-left: 2px solid rgba(225, 6, 0, 0.2);
+}
+
+.timeline-item:hover {
+    background: rgba(225, 6, 0, 0.05);
+    transform: translateX(10px);
+}
+
+.year {
+    min-width: 120px;
+    font-weight: 900;
+    color: #e10600;
+    font-size: 18px;
+}
+
+.details h3 { margin-bottom: 10px; font-size: 22px; }
+.details p { opacity: 0.7; font-size: 15px; }
+
+/* TABLE */
+.table-wrapper { padding: 20px; overflow-x: auto; }
+.stats-table { width: 100%; border-collapse: collapse; }
+.stats-table th { 
+    text-align: left; padding: 15px; 
+    border-bottom: 2px solid #e10600; 
+    text-transform: uppercase; font-size: 13px;
+}
+.stats-table td { padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+
+/* TWO COLUMNS */
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.list { list-style: none; margin-top: 20px; }
+.list li { margin-bottom: 12px; position: relative; padding-left: 20px; }
+.list li::before {
+    content: "◢";
+    position: absolute; left: 0;
+    color: #e10600; font-size: 10px; top: 5px;
+}
+
+/* QUOTE */
+blockquote {
+    padding: 40px;
+    font-size: 24px;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.4;
+    margin: 60px 0;
+    border-top: 1px solid rgba(225, 6, 0, 0.3);
+}
+
+/* FOOTER ACTIONS */
+.footer-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.back-btn, .media-btn {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.media-btn {
+    padding: 12px 25px;
+    background: #e10600;
+    border-radius: 5px;
+}
+
+.media-btn:hover { transform: scale(1.05); }
+.back-btn:hover { color: #e10600; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .info-card, .two-columns { grid-template-columns: 1fr; }
+    .timeline-item { flex-direction: column; gap: 10px; }
+    .bio-intro h1 { font-size: 40px; }
+}

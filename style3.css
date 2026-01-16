@@ -1,0 +1,286 @@
+/* 1. RESET & BASE SETTINGS */
+*
+
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    background: #0c0c16;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* 2. NAVIGATION (FIXED) */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(12, 12, 22, 0.95); /* Ημιδιαφανές για να φαίνεται το scroll */
+    backdrop-filter: blur(10px);
+}
+
+
+/* LEFT SECTION */
+.left-section {
+    width: 40%;
+    padding: 40px 60px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.game-menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.game-menu a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.6);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.3s;
+    
+}
+
+.game-menu a.active, .game-menu a:hover {
+    color: #e10600;
+}
+
+.game-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0; height: 2px;
+    background: #e10600;
+    bottom: -5px; left: 0;
+    transition: 0.3s;
+}
+
+.game-menu a.active::after, .game-menu a:hover::after {
+    width: 100%;
+}
+
+
+/* Hover & Active States */
+.game-menu li a:hover,
+.game-menu li a.active {
+    color: #e10600;
+}
+
+/* Underline Animation */
+.game-menu li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #e10600;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.game-menu li a:hover::after,
+.game-menu li a.active::after {
+    width: 100%;
+}
+
+/* 3. BIO CONTAINER CONTENT */
+.bio-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.info-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 24px;
+    border-radius: 12px;
+    margin: 50px 0;
+}
+
+.info-card span {
+    display: block;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.section {
+    margin-bottom: 60px;
+}
+
+.section h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.section h2::before {
+    content: "";
+    position: absolute;
+    left: -14px;
+    top: 4px;
+    width: 4px;
+    height: 24px;
+    background: #e10600;
+}
+
+/* 4. TIMELINE & TABLES */
+.timeline-item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 28px;
+}
+
+.year {
+    min-width: 120px;
+    font-weight: 600;
+    color: #e10600;
+}
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.stats-table th,
+.stats-table td {
+    padding: 14px;
+    text-align: left;
+}
+
+.stats-table th {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stats-table tr:not(:first-child):hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+/* 6. MISC ELEMENTS */
+blockquote {
+    font-style: italic;
+    opacity: 0.85;
+    padding-left: 20px;
+    border-left: 4px solid #e10600;
+    margin-bottom: 60px;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 40px;
+    color: #eaeaea;
+    text-decoration: none;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    opacity: 1;
+    color: #e10600;
+}
+
+/* 7. RESPONSIVE DESIGN */
+@media (max-width: 700px) {
+    .timeline-item {
+        flex-direction: column;
+        gap: 6px;
+    }
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+    .nav-container {
+        padding: 15px 20px;
+    }
+}
+
+/* ... (ο υπάρχων κώδικας CSS) ... */
+
+/* Κανόνες για την νέα ενότητα Social Media */
+.social-section {
+    text-align: center;
+    padding: 40px;
+    margin-top: 80px; /* Απόσταση από το προηγούμενο τμήμα */
+}
+
+.social-section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Απόσταση μεταξύ των κουμπιών */
+}
+
+.social-btn {
+    width: 60px; /* Μεγαλύτερο μέγεθος για καλύτερο πάτημα */
+    height: 60px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 24px; /* Μεγαλύτερο εικονίδιο */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth animation */
+}
+
+.social-btn:hover {
+    background: #e10600; /* Κόκκινο στο hover */
+    transform: translateY(-8px) scale(1.1); /* "Ανεβαίνει" και μεγαλώνει */
+    box-shadow: 0 15px 30px rgba(225, 6, 0, 0.5); /* Εφέ λάμψης/νέον */
+    border-color: #e10600;
+    color: white; /* Σιγουρευόμαστε ότι το εικονίδιο παραμένει λευκό */
+}
+
+/* Ειδικά χρώματα για πλατφόρμες αν θες (προαιρετικό) */
+.social-btn.ig:hover { box-shadow: 0 15px 30px rgba(230, 80, 160, 0.5); } /* Instagram-ish glow */
+.social-btn.tt:hover { box-shadow: 0 15px 30px rgba(219, 39, 48, 0.5); } /* TikTok glow */
+.social-btn.x:hover { box-shadow: 0 15px 30px rgba(121, 227, 241, 0.5); } /* X (Twitter) glow */
+.social-btn.fb:hover { box-shadow: 0 15px 30px rgba(24, 119, 242, 0.5); } /* Facebook glow */
+
+
+/* RESPONSIVE για μικρότερες οθόνες */
+@media (max-width: 500px) {
+    .social-links {
+        flex-wrap: wrap; /* Τα κουμπιά θα σπάνε σε νέα γραμμή */
+        gap: 15px;
+    }
+    .social-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}

@@ -1,168 +1,154 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-  <meta charset="UTF-8">
-  <title>Player Profile</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faidra Christina Logou | Player Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-  <div class="container">
+    <div class="main-wrapper">
+        
+        <section class="left-section">
+            <nav class="navbar">
+                <span class="logo">HerFooty</span>
+                <ul class="game-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="biography.html">Biography</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
 
-    <!-- LEFT SIDE -->
-    <div class="left">
+            <div class="player-hero">
+                <h1>Faidra Christina<br><span class="last-name">Logou</span></h1>
+                <p class="position-tag">CAM - Central Attacking Midfielder</p>
+            </div>
 
-      <nav>
-        <span class="logo">Football Player</span>
-        <ul>
-    
-          
-        </ul>
-      </nav>
+            <div class="content-cards">
+                <div class="bio-card">
+                    <h3>Profile</h3>
+                    <p>Creative forward with strong attacking instincts and excellent off-ball movement in the final third.</p>
+                </div>
 
-      <div class="player-info">
-        <h1>Faidra Christina<br>Logou</h1>
-        <p class="position">Olympiacos Forward</p>
-      </div>
+                <div class="career-card">
+                    <h3>Career History</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="year">2024–Present</span>
+                            <div class="club">
+                                <strong>Olympiacos WFC</strong>
+                                <p>3rd National Division</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="year">2022–2024</span>
+                            <div class="club">
+                                <strong>Panathinaikos WFC</strong>
+                                <p>2nd National Division</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="biography.html" class="bio-btn">Πλήρες Βιογραφικό</a>
+                </div>
+            </div>
+        </section>
 
-      <!-- CAREER / BIO BOX -->
-      <div class="career-box">
-
-        <div class="player-bio">
-          <h3>Profile</h3>
-          <p>
-            Creative forward with strong attacking instincts and excellent off-ball
-            movement in the final third.
-          </p>
+        <div class="image-section">
+            <span class="bg-number">8</span>
+            <img src="images/Logou.png" class="player-img" alt="Faidra Logou">
         </div>
 
-        <div class="career-timeline">
-          <h3>Career History</h3>
+        <aside class="right-section">
+            <div class="side-container">
+                
+                <div class="glass-card snapshot">
+                    <h4>Player Snapshot</h4>
+                    <ul class="snapshot-list">
+                        <li><span>Position</span><strong>Forward</strong></li>
+                        <li><span>Age</span><strong>31</strong></li>
+                        <li><span>Height</span><strong>1.60 m</strong></li>
+                        <li><span>Preferred Foot</span><strong>Right</strong></li>
+                        <li><span>Nationality</span><strong>Greek</strong></li>
+                    </ul>
+                </div>
 
-          <div class="career-item">
-            <span class="year">2024–Present</span>
-            <div class="details">
-              <strong>Olympiacos WFC</strong>
-              <p>3rd National Division</p>
+                <div class="glass-card stats-panel">
+                  
+                    <div class="skills-grid">
+                      
+                        <div class="skill">
+                            <div class="circle" style="--p:80"><span>80</span></div>
+                            <span>Attacking</span>
+                        </div>
+                        <div class="skill">
+                            <div class="circle" style="--p:82"><span>82</span></div>
+                            <span>Technical</span>
+                        </div>
+                        <div class="skill">
+                            <div class="circle" style="--p:78"><span>78</span></div>
+                            <span>Mental</span>
+                        </div>
+                        <div class="skill">
+                            <div class="circle" style="--p:65"><span>65</span></div>
+                            <span>Aerial</span>
+                        </div>
+                        <div class="skill">
+                            <div class="circle" style="--p:75"><span>75</span></div>
+                            <span>Physical</span>
+                        </div>
+                        <div class="skill">
+                            <div class="circle" style="--p:60"><span>60</span></div>
+                            <span>Defending</span>
+                        </div>
+                    </div>
+
+                    <div class="season-header">
+                        <h3>Season 2024-2025</h3>
+                    </div>
+
+                    <div class="mini-stats">
+                        <div class="stat-box">
+                            <span>Apps</span>
+                            <strong>8</strong>
+                            <img src="images/socccer.png" alt="icon">
+                        </div>
+                        <div class="stat-box">
+                            <span>Goals</span>
+                            <strong>4</strong>
+                            <img src="images/ball2.png" alt="icon">
+                        </div>
+                        <div class="stat-box">
+                            <span>Assists</span>
+                            <strong>7</strong>
+                            <img src="images/player.png" alt="icon">
+                          <script>
+  // Επιλέγουμε όλα τα στοιχεία με την κλάση .skill
+  const skills = document.querySelectorAll('.skill');
+
+  skills.forEach(skill => {
+    skill.addEventListener('click', () => {
+      // Αν το πατημένο έχει ήδη την κλάση active, την αφαιρούμε (toggle)
+      if (skill.classList.contains('active')) {
+        skill.classList.remove('active');
+      } else {
+        // Αφαιρούμε την κλάση active από όλα τα άλλα skills πρώτα
+        skills.forEach(s => s.classList.remove('active'));
+        // Την προσθέτουμε μόνο σε αυτό που πατήσαμε
+        skill.classList.add('active');
+      }
+    });
+  });
+</script>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-          </div>
-
-          <div class="career-item">
-            <span class="year">2022–2024</span>
-            <div class="details">
-              <strong>Panathinaikos WFC</strong>
-              <p>2nd National Division</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
+        </aside>
 
     </div>
-
-    <!-- RIGHT SIDE -->
-    <div class="right">
-
-      <img src="images/Logou.png" class="player-img" alt="Player">
-
-      <div class="side-panel">
-
-        <!-- PLAYER SNAPHOT -->
-        <div class="card snapshot-card">
-  <h4>Player Snapshot</h4>
-
-  <ul class="snapshot-list">
-    <li><span>Position</span><strong>Forward</strong></li>
-    <li><span>Age</span><strong>31</strong></li>
-    <li><span>Height</span><strong>1.60 m</strong></li>
-    <li><span>Preferred Foot</span><strong>Right</strong></li>
-    <li><span>Nationality</span><strong>Greek</strong></li>
-  </ul>
-</div>
-  
-
-
-<!-- STATS -->
-<section class="stats-panel">
-<!-- RADAR -->
-    <div class="skills">
-
-  <div class="skill">
-    <div class="circle" style="--p:80">80</div>
-    <span>Attacking</span>
-  </div>
-
-  <div class="skill">
-    <div class="circle" style="--p:65">65</div>
-    <span>Aerial</span>
-  </div>
-
-  <div class="skill">
-    <div class="circle" style="--p:75">75</div>
-    <span>Physical</span>
-  </div>
-
-  <div class="skill">
-    <div class="circle" style="--p:82">82</div>
-    <span>Technical</span>
-  </div>
-
-  <div class="skill">
-    <div class="circle" style="--p:60">60</div>
-    <span>Defending</span>
-  </div>
-
-  <div class="skill">
-    <div class="circle" style="--p:78">78</div>
-    <span>Mental</span>
-  </div>
-
-</div>
-
-  <header class="stats-header">
-    <div style="height: 20px;"></div>
-    <h3>Season 2024-2025</h3>
-    
-  </header>
-
-<div class="stats-cards">
-  <div class="stat-card">
-    
-    <span>Appearances</span>
-    <strong>8</strong>
-    <img src="images/apperance.png" class="icon" alt="Appearances">
-  </div>
-
-  <div class="stat-card">
-    
-    <span>Goals</span>
-    <strong>4</strong>
-    <img src="images/ball-removebg-preview-removebg-preview.png" class="icon" alt="Goals">
-  </div>
-
-  <div class="stat-card">
-    
-    <span>Assists</span>
-    <strong>7</strong>
-    <img src="images/assist2-removebg-preview.png" class="icon" alt="Assists">
-  </div>
-</div>
-
-
-  
-
-     
-
-</section>
-
-
-      </div>
-
-    </div>
-
-  </div>
 
 </body>
 </html>
